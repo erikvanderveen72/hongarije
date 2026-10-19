@@ -1,0 +1,91 @@
+EASYTERRA — HONGAARSE HTML-PROTOTYPES
+Versie 1 · 19 oktober 2026
+
+OPENEN
+Pak het ZIP-bestand uit. Open easyterra-hu.html in een moderne browser.
+Open easyterra-google-ads-hu.html voor de Hongaarse advertentieconcepten.
+Laat beide HTML-bestanden in dezelfde map staan: de onderlinge links werken dan.
+Beide bestanden bevatten hun eigen CSS, JavaScript, logo, beelden en lettertypen.
+Er is geen installatie, server of internetverbinding nodig om de prototypes te gebruiken.
+Bronlinks openen wel externe websites wanneer je daarop klikt.
+
+1. HONGAARSE EASYTERRA-PAGINA
+- Hongaarse navigatie, tekst, zoekvelden, bestemmingskaarten en FAQ.
+- Werkende demonstratie: plaatskeuze, datums, tijden, afwijkende inleverlocatie en leeftijd.
+- De zoekknop valideert invoer en toont een lokale zoekopdracht-samenvatting.
+- Geen live prijzen, beschikbaarheid, betalingen of echte boekingen.
+- HUF is de voorgestelde weergavevaluta; er worden geen wisselkoersen of tarieven berekend.
+- Ingevoerde gegevens blijven in de pagina en worden niet verzonden of permanent opgeslagen.
+
+2. HONGAARSE GOOGLE ADS-PAGINA
+- Drie conceptgroepen: autohuur in het buitenland, Budapest Airport en Spanje.
+- 30 koppen, 12 beschrijvingen en 4 sitelinks met elk 2 beschrijvingen.
+- Wisselende advertentievoorbeelden; smalle mobiele en brede desktopvoorvertoning.
+- Teksten kopiëren met een selecteerbaar tekstvak als de browser klembordtoegang niet ondersteunt.
+- CSV-knop exporteert alle 54 tekstelementen als UTF-8 met BOM en puntkomma's.
+- De CSV is een inhoudelijk werkbestand, geen kant-en-klare Google Ads Editor-import.
+- De /hu-paden in previews zijn ontwerpvoorstellen, geen bestaande of gecontroleerde live doelpagina's.
+- Er is geen Google Ads-account gekoppeld. Niets is gepubliceerd en er is geen advertentiebudget uitgegeven.
+
+HUISSTIJL
+Gebaseerd op de officiële EasyTerra.nl-homepage, publiek bekeken op 19 oktober 2026:
+- Merkblauw: #1670d3
+- Groen accent: #00b058
+- Donkere tekst: #1f2b3e
+- Lichtgrijze achtergrond: #f4f5f7
+- Koppen: Gilroy Bold; tekst: Proxima Nova
+- Officieel logo, heroafbeelding en bestemmingsbeelden vanaf het EasyTerra-CDN
+De belangrijkste actieknoppen gebruiken een donkerder groen (#008541) voor beter tekstcontrast.
+De layouts zijn lokalisatieconcepten, geen exacte kopieën van elke Nederlandse pagina.
+Merken, foto's en fonts blijven eigendom van de betreffende rechthebbenden. Controleer gebruiksrechten
+voordat deze ontwerpen buiten de interne beoordeling worden gepubliceerd.
+
+CONTROLES
+Geslaagd:
+- JavaScript-syntaxiscontrole via Node
+- HTML-parsing, unieke IDs, formulierlabels en lokale ankerverwijzingen
+- Alle 54 advertentieteksten binnen de officiële karakterlimieten
+- 10 logische tests in een gesimuleerde DOM: validatie, plaatskeuze, afwijkende inleverplek,
+  leeftijd, zoekoverzicht, advertentiegroepen, variaties, previewtoggle, kopiëren/fallback en CSV-export
+- Afzonderlijke inhoudelijke controle van de Hongaarse tekst
+Niet uitgevoerd:
+- Echte browser-rendering en visuele desktop-/mobiele controle: de lokale previewverbinding was
+  in de gebruikte cloudbrowser niet bereikbaar. Responsieve CSS is wel geïmplementeerd.
+- Compatibiliteitstest in Safari/Firefox en op echte telefoons
+- Formele native-speaker/merk/legal review, live zoekintegratie of advertentieplatformgoedkeuring
+
+VOOR LIVEGANG
+Laat de Hongaarse tekst door een native spreker en EasyTerra beoordelen. Koppel de echte zoek- en
+boekingsfunctionaliteit. Bevestig valuta, lokale voorwaarden, juiste contactgegevens en werkende
+Hongaarse doelpagina's. Stel pas daarna targeting, budget, meting en toestemmingsinstellingen vast.
+Zoekwoorden en uitsluitingen zijn voorstellen, geen onderbouwde zoekvolumes of CPC-prognoses.
+De Budapest Airport-doelgroep verdient een eigen geografische afweging.
+
+BRONNEN
+Officiële site en merkstijl:
+https://www.easyterra.nl/
+https://cdn.easyterra.com/v3.95b3e08dd4/css/easyterra-default-landing.min.css
+https://cdn.easyterra.com/images/themes/easyterra/logo.svg
+https://cdn.easyterra.com/images/themes/easyterra/hero-bg.avif
+https://www.easyterra.nl/hongarije/boedapest/autohuur-boedapest-airport.html
+https://www.easyterra.nl/autohuur-spanje.html
+Google Ads-karakterlimieten:
+https://support.google.com/google-ads/answer/7684791?hl=en
+https://support.google.com/google-ads/answer/2375416?hl=en
+https://developers.google.com/google-ads/api/reference/rpc/v26/SitelinkAsset
+
+
+UITBREIDING 19 OKTOBER 2026 — AI-FOTOCONCEPTEN
+Drie fotorealistische AI-gegenereerde beelden toegevoegd aan easyterra-google-ads-hu.html.
+Thema’s: buitenlandse autohuur, luchthaven ophalen en Spaanse kustvakantie.
+De nieuwe beelden zijn ingebed; de pagina blijft offline bruikbaar. De geoptimaliseerde JPG-bestanden
+staan in assets/ met hun herkomst en SHA-256 in image-manifest.json. Gebruik de downloadlinks
+in de pagina of pak de ZIP uit. Er zijn geen nieuwe externe beeldverzoeken.
+De beelden zijn illustratief: geen echte klantfoto’s, geen gegarandeerde huurauto’s en geen
+gecontroleerde locatiebeelden. Een passend automodel, beschikbaarheid of luchthavenservice wordt
+niet beloofd. Google Ads-goedkeuring of weergave is niet gegarandeerd; controleer vóór livegebruik.
+Het bestaande boekingsprototype, CSV-bestand en bestaande testscript zijn ongewijzigd gebleven.
+Er zijn geen campagnes gepubliceerd, geen accounts gewijzigd en geen budgetten uitgegeven.
+
+BEELDCOMPRESSIE: dezelfde AI-beelden, zonder uitsnede of inhoudelijke wijziging, opgeslagen als JPG
+(1536×1024, kwaliteit 88). Originele PNG-bestanden zijn niet opgenomen om de ZIP klein te houden.

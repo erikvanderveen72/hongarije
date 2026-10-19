@@ -1,0 +1,10 @@
+{
+  "passed": 5,
+  "results": [
+    "Three ad groups and correct initial asset counts",
+    "Preview combinations and mobile/desktop toggle",
+    "Group changes update preview, keywords and relevant sitelinks",
+    "Clipboard copy and offline fallback",
+    "CSV export: 54 assets plus header"
+  ]
+}

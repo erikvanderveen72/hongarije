@@ -1,0 +1,35 @@
+[
+  {
+    "file": "assets/01-kulfoldi-utazas-ai.jpg",
+    "theme": "Autóbérlés külföldön",
+    "origin": "OpenAI built-in image generation; illustrative AI-generated scene",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "3eef0d59646f5c0ecb2014e9d976cb16424ae68390f9d4c82f6a1f5da0a216ee",
+    "encoding": "JPEG quality 88; original dimensions; compression only"
+  },
+  {
+    "file": "assets/02-repteri-atvetel-ai.jpg",
+    "theme": "Budapest repülőtér",
+    "origin": "OpenAI built-in image generation; illustrative AI-generated scene",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "8aeda27743c433d190f9472fb51dae1cbf8890d7c87a9ed23556dd631589a397",
+    "encoding": "JPEG quality 88; original dimensions; compression only"
+  },
+  {
+    "file": "assets/03-spanyol-tengerpart-ai.jpg",
+    "theme": "Spanyolországi nyaralás",
+    "origin": "OpenAI built-in image generation; illustrative AI-generated scene",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "21a9a45e710b83e3873864afe5e1fbb0d0383c4d3eccc4bfac6962bc38697146",
+    "encoding": "JPEG quality 88; original dimensions; compression only"
+  }
+]

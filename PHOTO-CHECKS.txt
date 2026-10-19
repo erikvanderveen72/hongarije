@@ -1,0 +1,14 @@
+PHOTO EXPANSION CHECKS — 19 OCTOBER 2026
+
+PASS: Booking HTML, CSV, original test script and original results preserved byte-for-byte
+PASS: HTML parsed; unique IDs
+PASS: All 3 JPEGs verified 1536×1024; embedded and download bytes match optimized files; AI-labelled alt text
+PASS: Local links and anchors resolve
+PASS: Original Ads JavaScript and JSON unchanged
+PASS: All executable JavaScript passes Node syntax check
+PASS: Responsive one-column gallery CSS at 800px verified statically
+PASS: 5 Node VM DOM-mock Ads logic checks (see qa-ads-logic.json).
+NOT RUN: browser rendering, actual mobile/desktop layout, real browser image download. Browser access restriction respected.
+NOT RERUN: original booking test requires unavailable linkedom; booking source and original test are byte-identical.
+
+Independent static/image review passed before compression. JPEG conversion visually checked afterward: same scene, dimensions and framing, acceptable photographic quality. Structural, image-integrity and five logic checks rerun successfully after compression.

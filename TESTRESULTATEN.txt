@@ -1,0 +1,24 @@
+EasyTerra HU — boekingsprototype, 19 oktober 2026
+
+Open easyterra-hu.html rechtstreeks. Alles voor de homepage en boekingsdemo is ingebed. Internet is niet nodig. De oorspronkelijke Ads-HTML, CSV en LEESMIJ zijn als ongewijzigde bijbestanden behouden. Originele Library-bestanden blijven ongewijzigd.
+
+Flow
+Homepagezoeken -> resultaten/filter/sortering -> bij basisaanbod een Worry-Free-vergelijkingsdialog -> één lange boekingspagina -> gesimuleerde bevestiging. Extra's hebben aantallen en een apart als lokaal te betalen benoemde demoprijs. Accountwachtwoord is uitgeschakeld; er wordt geen account aangemaakt. Geen echte boeking, betaling, e-mail, abonnement of verzending. Gebruik uitsluitend fictieve gegevens. Geen opslag na sluiten/herladen.
+
+Bronnen
+- Bestaand Hongaars EasyTerra-prototype: Library libfile_fd9522b05dc08191805722ad5fea73bc; bestaande ZIP libfile_8bd8af3080208191bb12257f12811f7c.
+- https://www.easyterra.nl/
+- https://www.easyterra.nl/faq/hoe-en-wanneer-betaal-ik-voor-mijn-huurauto
+- Actueel browseronderzoek, 19 oktober 2026, via oudertaak aangeleverd; bewijsarchief Library libfile_e9eba919b41c81918e8ab04a6022ee3b. Resultaten met filters/sortering en Reserveer nu; Worry-Free-vergelijking bij goedkoop basisaanbod; vervolgens lange pagina met dekking, accessoires, hoofdbestuurder, account, vlucht, grensoverschrijding en bevestiging. Sticky prijsoverzicht rechts. Bevestigingsknop niet aangeklikt in het officiële onderzoek.
+
+Geslaagd
+- JavaScript syntax: node --check (beide scripts).
+- Onafhankelijke bronreview: unieke IDs, gelabelde velden, foutfocus, native dialog, mobiele CSS, geen netwerk- of opslagcode. Gevonden dubbele injectie hersteld; voortgang eindscherm, onthouden staat/aanhef/vlucht/grenskeuze en aria-invalid voor US staat hersteld.
+- DOM-simulatietest met linkedom: 3 resultaten, automatische-versnellingsfilter, Worry-Free-modal en keuze, lange formulierpagina, aantal/prijscalculatie, lege-formuliervalidatie, fictieve invulknop, conditionele US-staatvalidatie, gesimuleerde bevestiging, juiste actieve eindstap, unieke booking-ID, afwezigheid netwerk/opslag-API's. Alle assertions geslaagd.
+- CSS-broncontrole: <=760px één kolom, geen vaste sidebar, 2-kolomsvelden en modal worden één kolom; zichtbare toetsenbordfocus; reduced-motion ondersteuning.
+
+Test herhalen
+Installeer linkedom uit npm in een afzonderlijke testomgeving. Node 22 aanbevolen. Voer test-prototype.cjs uit met linkedom bereikbaar in NODE_PATH of node_modules. Dit is een DOM-simulatie, geen echte browser- of renderertest.
+
+Beperkingen
+Browsertoegang tot lokale file:-URL geweigerd door browserbeveiligingsbeleid. Geen alternatieve browserroute gebruikt. Daardoor desktop/mobiel visuele rendering, echte toetsenbordtabvolgorde, browser-terug/vooruit en native constraint validation niet in een echte browser geverifieerd. Geen WCAG-conformiteitsclaim. Bestaande homepagefouten buiten de boekingsuitbreiding niet uitgebreid getest. Prijzen, leverancier, beschikbaarheid, dekking en voorwaarden zijn fictief; geen live beschikbaarheid. Einde expliciet gesimuleerd; betaling niet onderzocht of geïmplementeerd. Hongaars is concepttekst, niet door een native vertaler gereviewd. Onderzoeksbronnen door oudertaak aangeleverd, niet opnieuw live onderzocht door deze implementer.

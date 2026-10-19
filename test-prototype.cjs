@@ -1,0 +1,14 @@
+// DOM simulation only: no browser rendering, requests or booking services.
+const {parseHTML}=require('linkedom');
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const html=fs.readFileSync(__dirname+'/easyterra-hu.html','utf8');const {window}=parseHTML(html),d=window.document;
+const proto=window.HTMLElement.prototype;proto.focus=function(){};proto.scrollIntoView=function(){};proto.showModal=function(){this.open=true};proto.close=function(){this.open=false};proto.checkValidity=function(){return !!this.value&& (this.type!=='email'||/^[^@]+@[^@]+\.[^@]+$/.test(this.value))};
+Object.defineProperty(window.HTMLSelectElement.prototype,'value',{get(){return this._value??this.querySelector('option[selected]')?.textContent??this.querySelector('option')?.getAttribute('value')??this.querySelector('option')?.textContent},set(v){this._value=v},configurable:true});
+let hist=[];let ctx={window,document:d,history:{pushState(s){hist.push(s)}},Event:window.Event,Date,Intl,Number,String,Math,Object,setTimeout,clearTimeout};vm.createContext(ctx);for(const s of d.querySelectorAll('script'))vm.runInContext(s.textContent,ctx);
+const $=id=>d.getElementById(id),click=(sel)=>d.querySelector(sel).click();
+$('pickup').value='Budapest repülőtér';$('adult').checked=true;window.dispatchEvent(new window.Event('easyterra-search'));assert.equal(d.querySelectorAll('[data-car]').length,3);
+$('car-filter').value='Automata';$('car-filter').onchange({target:$('car-filter')});assert.equal(d.querySelectorAll('[data-car]').length,1);
+$('car-filter').value='all';$('car-filter').onchange({target:$('car-filter')});click('[data-car="0"]');assert.equal($('worry-dialog').open,true);click('[data-choose="1"]');assert($('driver-form'));assert($('homepage').hidden);assert(!$('booking').hidden);
+$('extra-child').value='2';$('extra-child').onchange();assert($('extras-price').textContent.includes('25'));
+$('driver-form').onsubmit({preventDefault(){}});assert(!$('driver-errors').hidden);assert.equal($('driver-first').getAttribute('aria-invalid'),'true');
+click('[data-action="fill"]');$('rental-consent').checked=true;$('review-consent').checked=true;$('driver-country').value='Egyesült Államok';$('driver-country').onchange();$('driver-form').onsubmit({preventDefault(){}});assert.equal($('driver-state').getAttribute('aria-invalid'),'true');$('driver-state').value='Demo State';$('driver-form').onsubmit({preventDefault(){}});assert($('booking-title').textContent.includes('Szimulált'));assert(d.querySelector('[aria-current="step"]').textContent.startsWith('3.'));assert.equal(d.querySelectorAll('#booking').length,1);assert(!/fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage/.test(html));console.log('PASS: results, filter, Worry-Free modal, long form, quantity totals, required validation, demo fill, conditional US-state validation, simulated confirmation, progress, unique IDs, no transmission/storage APIs.');
